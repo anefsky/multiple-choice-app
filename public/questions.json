@@ -1,0 +1,74 @@
+[
+	{
+		"question": "What is your favorite dog breed?",
+		"copy": "New Yorkers love dogs.  Let us know which is your favorite.",
+		"answers": [
+			{
+				"choice": "poodle",
+				"points": 1
+			},
+			{
+				"choice": "terrier",
+				"points": 2
+			},
+			{
+				"choice": "pit bull",
+				"points": 3
+			}
+		]
+	},
+	{
+		"question": "What is your favorite New York landmark?",
+		"copy": "So many sites to see.  Which would you like to see first?",
+		"answers": [
+			{
+				"choice": "Empire State building",
+				"points": 1
+			},
+			{
+				"choice": "Statue of Liberty",
+				"points": 2
+			}
+		]
+	},
+	{
+		"question": "What is your preferred mode of transportation?",
+		"copy": "Most New Yorkers don't own cars.  How do you prefer to get around?",
+		"answers": [
+			{
+				"choice": "subway",
+				"points": 1
+			},
+			{
+				"choice": "buses",
+				"points": 2
+			},
+			{
+				"choice": "Uber",
+				"points": 3
+			},
+			{
+				"choice": "Walking",
+				"points": 4
+			}
+		]
+	},
+	{
+		"question": "What is your favorite street food?",
+		"copy": "There are so many choices on the streets of New York.  What is your preference?",
+		"answers": [
+			{
+				"choice": "hot dog",
+				"points": 1
+			},
+			{
+				"choice": "pretzel",
+				"points": 2
+			},
+			{
+				"choice": "falafel",
+				"points": 3
+			}
+		]
+	}
+]

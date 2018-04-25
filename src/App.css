@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  margin-top: 100px;
+}
+
+h2, h4 {
+	font-weight: normal;
+	margin-bottom: 50px;
+}
+
+.header {
+	width: 500px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto 50px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.prev-button {
+	background-image: url("prev.jpg");
+	height: 50px;
+	width: 50px;
+	background-repeat: no-repeat;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.choice-button {
+	width: 150px;
+	height: 75px;
+	border-radius: 10px;
+	margin: 10px;
+	box-shadow: 3px 3px #888;
+	cursor: pointer;
+	font-size: 18px;
+	background: linear-gradient(to bottom, #fff, #ccc);
+	outline: none;
+}
+
+.choice-button:hover {
+	background: linear-gradient(to bottom, #eee, #fff);
+}
+
+.choice-button.selected {
+	color: red;
+}
+
+.score {
+	text-align: center;
+	margin-top: 100px;
+	font-size: 24px;
+}
+
+.score .number {
+	font-weight: bold;
+	color: red;
+}
+
