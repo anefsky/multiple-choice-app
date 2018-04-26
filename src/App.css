@@ -27,6 +27,7 @@ h2, h4 {
 	border: none;
 	outline: none;
 	cursor: pointer;
+	background-color: white;
 }
 
 .choice-button {
