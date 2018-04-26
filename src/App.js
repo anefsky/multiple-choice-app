@@ -22,14 +22,13 @@ class App extends Component {
 
   componentDidMount() {
     fetch('questions.json')
-    .then(response => {
-      response.text().then(responseText => {
-        this.questions = JSON.parse(responseText);
-      })
+    .then(results => {
+      return results.json();
     })
-    .then(
-      data => this.setState({ isLoading: false })
-    )
+    .then(data => {
+      this.questions = data;
+      this.setState({isLoading: false});
+    })
   }
 
   onNext() {
