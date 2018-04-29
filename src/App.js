@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header';
+import NextPrevButtonSet from './components/NextPrevButtonSet';
 import Choices from './components/Choices';
 
 class App extends Component {
@@ -16,6 +16,7 @@ class App extends Component {
 
     this.onAnswer = this.onAnswer.bind(this);
     this.onPrevious = this.onPrevious.bind(this);
+    this.onNext = this.onNext.bind(this);
   }
 
   componentDidMount() {
@@ -57,6 +58,18 @@ class App extends Component {
     return sum;
   }
 
+  isFirstQuestion() {
+    return this.questionIdx === 0;
+  }
+
+  isLastQuestion() {
+    return this.questionIdx === this.questions.length - 1;
+  }
+
+  wasNextQuestionVisited() {
+    return this.selections.length > this.questionIdx;
+  }
+
   render() {
     const {isLoading, isDone} = this.state;
 
@@ -67,12 +80,17 @@ class App extends Component {
     if(!isDone) {
       return (
         <div className="App">
+          <div className="header">
+            <NextPrevButtonSet
+              isFirst = {() => this.isFirstQuestion()}
+              isLast = {() => this.isLastQuestion()}
+              onNext = {() => this.onNext}
+              onPrevious = {() => this.onPrevious}
+              wasNextQuestionVisited = {() => this.wasNextQuestionVisited()}
+            />
 
-          <Header
-            onclick = {this.onPrevious}
-            getQuestionIndex = {() => this.questionIdx}
-            numQuestions = {this.questions.length}
-          />
+            <p>Step {this.questionIdx + 1} of {this.questions.length}</p>
+          </div>
 
           <h2>{this.questions[this.questionIdx].question}</h2>
           <h4>{this.questions[this.questionIdx].copy}</h4>

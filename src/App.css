@@ -16,18 +16,30 @@ h2, h4 {
 }
 
 .hide {
-  visibility: hidden;
+	opacity: 0.2;
+	pointer-events: none;
 }
 
-.prev-button {
+.nav-button-set {
+	width: 150px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-button {
 	background-image: url("prev.jpg");
-	height: 50px;
-	width: 50px;
+	height: 41px;
+	width: 41px;
 	background-repeat: no-repeat;
 	border: none;
 	outline: none;
 	cursor: pointer;
 	background-color: white;
+}
+
+.nav-button.next {
+	transform: rotate(180deg);
+	transform-origin: 50% 50%;
 }
 
 .choice-button {
