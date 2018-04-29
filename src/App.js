@@ -89,24 +89,23 @@ class App extends Component {
               wasNextQuestionVisited = {() => this.wasNextQuestionVisited()}
             />
 
-            <p>Step {this.questionIdx + 1} of {this.questions.length}</p>
+            <p classList="counter">Step {this.questionIdx + 1} of {this.questions.length}</p>
           </div>
 
           <h2>{this.questions[this.questionIdx].question}</h2>
           <h4>{this.questions[this.questionIdx].copy}</h4>
 
-         <Choices
-            selections = {this.selections}
-            questions = {this.questions}
-            getQuestionIndex = {() => this.questionIdx}
-            onclick = {this.onAnswer}
-         />
-
-       </div>
+           <Choices
+              selections = {this.selections}
+              questions = {this.questions}
+              getQuestionIndex = {() => this.questionIdx}
+              onclick = {this.onAnswer}
+           />
+        </div>
        );
     } else {
       return(
-        <p className="score">Score: <span className="number">{this.getScore()}</span> points</p>
+        <p className="App score">Score: <span className="number">{this.getScore()}</span> points</p>
       )
     }
   }

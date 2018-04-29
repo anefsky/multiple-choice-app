@@ -1,18 +1,23 @@
 .App {
   text-align: center;
-  margin-top: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
 }
 
 h2, h4 {
 	font-weight: normal;
-	margin-bottom: 50px;
+	margin-bottom: 100px;
+	line-height: 25px;
 }
 
 .header {
-	width: 500px;
 	display: flex;
 	justify-content: space-between;
-	margin: 0 auto 50px;
+	margin: 0 auto 100px;
+	padding: 0 100px;
 }
 
 .hide {
@@ -56,6 +61,7 @@ h2, h4 {
 
 .choice-button:hover {
 	background: linear-gradient(to bottom, #eee, #fff);
+	box-shadow: -1px -1px #888;
 }
 
 .choice-button.selected {
@@ -64,7 +70,6 @@ h2, h4 {
 
 .score {
 	text-align: center;
-	margin-top: 100px;
 	font-size: 24px;
 }
 
@@ -72,4 +77,27 @@ h2, h4 {
 	font-weight: bold;
 	color: red;
 }
+
+@media only screen and (max-width: 600px) {
+	.App {
+		width: 85%;
+		top: 25px;
+		transform: translate(-50%, 0);
+	}
+    .header {
+		display: block;
+		margin: 0 auto 50px;
+		padding: 0;
+	}
+
+    .nav-button-set {
+    	margin: 0 auto;
+
+    }
+
+    h2, h4 {
+    	margin-bottom: 25px;
+    }
+}
+
 
