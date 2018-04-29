@@ -89,7 +89,7 @@ class App extends Component {
               wasNextQuestionVisited = {() => this.wasNextQuestionVisited()}
             />
 
-            <p classList="counter">Step {this.questionIdx + 1} of {this.questions.length}</p>
+            <p className="counter">Step {this.questionIdx + 1} of {this.questions.length}</p>
           </div>
 
           <h2>{this.questions[this.questionIdx].question}</h2>

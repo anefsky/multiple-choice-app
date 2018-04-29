@@ -10,7 +10,7 @@
 h2, h4 {
 	font-weight: normal;
 	margin-bottom: 100px;
-	line-height: 25px;
+	line-height: 1.5;
 }
 
 .header {
@@ -92,11 +92,17 @@ h2, h4 {
 
     .nav-button-set {
     	margin: 0 auto;
-
     }
 
     h2, h4 {
     	margin-bottom: 25px;
+    }
+
+    .score {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
     }
 }
 
