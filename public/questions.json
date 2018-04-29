@@ -5,15 +5,15 @@
 		"answers": [
 			{
 				"choice": "poodle",
-				"points": 1
+				"points": 10
 			},
 			{
 				"choice": "terrier",
-				"points": 2
+				"points": 20
 			},
 			{
 				"choice": "pit bull",
-				"points": 3
+				"points": 30
 			}
 		]
 	},
@@ -23,11 +23,11 @@
 		"answers": [
 			{
 				"choice": "Empire State building",
-				"points": 1
+				"points": 10
 			},
 			{
 				"choice": "Statue of Liberty",
-				"points": 2
+				"points": 20
 			}
 		]
 	},
@@ -37,19 +37,19 @@
 		"answers": [
 			{
 				"choice": "subway",
-				"points": 1
+				"points": 10
 			},
 			{
 				"choice": "buses",
-				"points": 2
+				"points": 20
 			},
 			{
 				"choice": "Uber",
-				"points": 3
+				"points": 30
 			},
 			{
 				"choice": "Walking",
-				"points": 4
+				"points": 40
 			}
 		]
 	},
@@ -59,15 +59,15 @@
 		"answers": [
 			{
 				"choice": "hot dog",
-				"points": 1
+				"points": 10
 			},
 			{
 				"choice": "pretzel",
-				"points": 2
+				"points": 20
 			},
 			{
 				"choice": "falafel",
-				"points": 3
+				"points": 30
 			}
 		]
 	}

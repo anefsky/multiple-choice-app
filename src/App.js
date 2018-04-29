@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Choices from './components/Choices';
-import TextArea from './components/TextArea';
 
 class App extends Component {
   constructor() {
@@ -13,9 +12,8 @@ class App extends Component {
     };
     this.questions = null;
     this.questionIdx = 0;
-    this.answerPoints = [];
+    this.selections = [];
 
-    this.onNext = this.onNext.bind(this);
     this.onAnswer = this.onAnswer.bind(this);
     this.onPrevious = this.onPrevious.bind(this);
   }
@@ -46,14 +44,21 @@ class App extends Component {
   }
 
 
-  onAnswer(index, points) {
-    this.answerPoints[index] = points;
+  onAnswer(index, selectionIdx) {
+    this.selections[index] = selectionIdx;
     this.onNext();
+  }
+
+  getScore() {
+    let sum = 0;
+    this.questions.forEach( (question, index) =>
+      sum += question.answers[this.selections[index]].points
+    )
+    return sum;
   }
 
   render() {
     const {isLoading, isDone} = this.state;
-    const score = this.answerPoints.length ? this.answerPoints.reduce((a, b) => a + b) : 0;
 
     if(isLoading) {
       return <p>Loading...</p>;
@@ -69,23 +74,21 @@ class App extends Component {
             numQuestions = {this.questions.length}
           />
 
-          <TextArea
-            question = {this.questions[this.questionIdx].question}
-            copy = {this.questions[this.questionIdx].copy}
-          />
+          <h2>{this.questions[this.questionIdx].question}</h2>
+          <h4>{this.questions[this.questionIdx].copy}</h4>
 
          <Choices
-          answerPoints = {this.answerPoints}
-          questions = {this.questions}
-          getQuestionIndex = {() => this.questionIdx}
-          onclick = {this.onAnswer}
+            selections = {this.selections}
+            questions = {this.questions}
+            getQuestionIndex = {() => this.questionIdx}
+            onclick = {this.onAnswer}
          />
 
        </div>
        );
     } else {
       return(
-        <p className="score">Score: <span className="number">{score}</span> points</p>
+        <p className="score">Score: <span className="number">{this.getScore()}</span> points</p>
       )
     }
   }

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Choices extends Component {
 	constructor(props) {
 		super(props);
-		this.answerPoints = props.answerPoints;
+		this.answerPoints = props.selections;
 		this.questions = props.questions;
 		this.getQuestionIndex = props.getQuestionIndex;
 		this.onclick = props.onclick;
@@ -18,7 +18,7 @@ class Choices extends Component {
 	              key = {item.choice}
 	              className = {"choice-button " + 
 	              	(this.answerPoints[this.getQuestionIndex()] - 1 === index  ? "selected" : "")}
-	              onClick = {() => this.onclick(this.getQuestionIndex(), item.points)}
+	              onClick = {() => this.onclick(this.getQuestionIndex(), index)}
 	            >
 	              {item.choice}
 	            </button>
