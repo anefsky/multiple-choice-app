@@ -3,9 +3,8 @@ import React, { Component } from 'react';
 class Choices extends Component {
 	constructor(props) {
 		super(props);
-		this.selections = props.selections;
 		this.questions = props.questions;
-		this.getQuestionIndex = props.getQuestionIndex;
+		this.getQuestionIndex = props.getQuestionIndex; 
 		this.onclick = props.onclick;
 	}
 
@@ -17,7 +16,7 @@ class Choices extends Component {
 	            <button
 	              key = {item.choice}
 	              className = {"choice-button " + 
-	              	(this.selections[this.getQuestionIndex()] === index  ? "selected" : "")}
+	              	(this.props.getSelections()[this.getQuestionIndex()] === index  ? "selected" : "unselected")}
 	              onClick = {() => this.onclick(this.getQuestionIndex(), index)}
 	            >
 	              {item.choice}
